@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <label >Gender</label>
+        <select id ="gender">
+            <option hidden selected > -- select your gender -- </option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Transgender</option>
+        </select>
+        <label for="birthday">Year of birth</label>
+        <input type="date" id="birthday">
+    <button onclick="check_age()">Validate Marriage</button>
+
+    <script>
+        function check_age() {
+            
+            var gender = document.getElementById("gender").value;
+            var age = document.getElementById("birthday").value;
+            var [year,month,day]= age.split("-").map(Number);
+            var actualage = ((2021-year)*12) + month;
+            var male_age = 252;
+            var female_age = 216;
+            if(gender =="Male" && actualage >= male_age){
+                alert("Valid legal age to get married")
+            }else if(gender =="Male" && actualage < male_age){
+                alert("Not a valid age to get married")
+            }else if(gender =="Female" && actualage >=female_age ){
+                alert("Valid legal age to get married")
+            }else if(gender =="Female" && actualage < female_age ){
+                alert("Not a valid legal age to get married")
+            }else if(gender =="Transgender"){
+                alert("Hold on! Decision is yet to be announced")
+            }
+
+        }
+    </script>
+</body>
+</html>

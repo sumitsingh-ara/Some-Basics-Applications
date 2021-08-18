@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Periodic Table</title>
+    <style>
+      #container{
+        width: 78%;
+        height: 450px;
+        margin: 50px auto;
+        display: flex;
+      }
+      h2 {
+        text-align: center;
+        width: 100%;
+        font-size: 50px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .H{
+        color:white;text-align:center;line-height:50px;font-size: 30px;
+      }
+      .si{
+        font-size: 60px;font-weight: bold;margin-left: 10px;margin-top: 30px;
+      }
+      .fourteen {
+        float: right;margin-right:10px;margin-top: 10px;
+      }
+      .silicon {
+        margin-left: 10px;font-size: 20px;
+      }
+      #first-col div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+      #second-col {
+        margin-top: 62px;
+      }
+      #second-col div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+      }
+      #third-col {
+        margin-top: 310px;
+      }
+      #third-col div {
+        width: 48px;
+        height: 45px;
+        border: 4px solid black;
+        margin: 10px;
+      }
+      #big-boss {
+        display: grid;
+        width: 220px;
+        margin-top: 15px;
+        grid-template-areas:
+          "big big big"
+          "b bb bbb";
+        height: 420px;
+      }
+      #big-box {
+        grid-area: big;
+        width: 150px;
+        height: 136px;
+        border: 1px solid black;
+        margin-top: 20px;
+        margin-bottom: 12px;
+      }
+      #big-col1 {
+        grid-area: b;
+      }
+      #big-col2 {
+        grid-area: bb;
+      }
+      #big-col3 {
+        grid-area: bbb;
+      }
+      #big-col1 div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px 0px;
+        background-color: blue;
+      }
+      #big-col2 div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px 0px;
+        background-color: blue;
+      }
+      #big-col3 div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px 0px;
+        background-color: blue;
+      }
+
+      #fourth-col1 {
+        margin-top: 185px;
+      }
+      #fourth-col1 div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px 0px;
+        margin-right: 10px;
+        background-color: blue;
+      }
+      #fourth-col {
+        margin-top: 185px;
+      }
+      #fourth-col div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px 10px;
+        background-color: blue;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .green {
+        background-color: green;
+      }
+      .light-green {
+        background-color: #66bb6a;
+      }
+      .pink {
+        background-color: #f06292;
+      }
+      #maroon {
+        background-color: #b71c1c;
+      }
+      .gray {
+        background-color: #fafafa;
+      }
+      .slate {
+        background-color: #616161;
+      }
+      .yellow {
+        background-color: #fbc02d;
+      }
+      .violet {
+        background-color: #8e24aa;
+      }
+      .orange {
+        background-color: #FF5722;
+      }
+      #container2{
+        width: 50%;
+        height: 100px;
+        margin: 50px auto;
+      }
+      #flex1 div{
+          width:7.14%;
+          height:50px;
+          border: 1px solid GRAY;
+      }
+      #flex1{
+          display: flex;
+          width: 100%;
+      }
+      .dark-green {
+          background-color: #33691E;
+      }
+      .la{
+        color:white;font-size:20px;text-align:center;line-height:70px;
+      }
+      .am{
+        font-size: 20px;
+        text-align: center;line-height: 60px;
+      }
+      .no{
+        font-size: 20px;text-align: right;line-height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>THE PERIODIC TABLE OF ELEMENTS</h2>
+    <div id="container">
+      <div id="first-col">
+        <div id="maroon" class="H">H</div>
+        <div class="light-green"></div>
+        <div class="light-green"></div>
+        <div class="light-green"></div>
+        <div class="light-green"></div>
+        <div class="light-green"></div>
+        <div class="light-green"></div>
+      </div>
+      <div id="second-col">
+        <div class="pink">4</div>
+        <div class="pink">12</div>
+        <div class="pink">20</div>
+        <div class="pink">38</div>
+        <div class="pink">56</div>
+        <div class="pink">88</div>
+      </div>
+      <div id="third-col">
+        <div class="gray"></div>
+        <div class="gray"></div>
+      </div>
+      <div id="big-boss">
+        <div id="big-box" class="light-green">
+            <div class="fourteen" >14</div>
+
+            <div class="si">Si</div>
+            <div class="silicon" >Silicon</div>
+        </div>
+        <div id="big-col1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div id="big-col2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="big-col3">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div id="fourth-col1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="fourth-col">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="fourth-col">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="fourth-col">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="fourth-col">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="fourth-col">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="second-col">
+        <div class="violet"></div>
+        <div class="orange"></div>
+        <div class="orange"></div>
+        <div class="orange"></div>
+        <div class="orange"></div>
+        <div class="slate"></div>
+      </div>
+      <div id="second-col">
+        <div class="green"></div>
+        <div class="violet"></div>
+        <div class="violet"></div>
+        <div class="orange"></div>
+        <div class="orange"></div>
+        <div class="slate"></div>
+      </div>
+      <div id="second-col">
+        <div class="green"></div>
+        <div class="green"></div>
+        <div class="violet"></div>
+        <div  class="violet"></div>
+        <div class="orange"></div>
+        <div class="slate"></div>
+      </div>
+      <div id="second-col">
+        <div class="green"></div>
+        <div class="green"></div>
+        <div class="green"></div>
+        <div class="violet"></div>
+        <div class="violet"></div>
+        <div class="slate"></div>
+      </div>
+      <div id="second-col">
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="slate"></div>
+      </div>
+      <div id="first-col">
+        <div class="yellow"></div>
+        <div class="yellow"></div>
+        <div class="yellow"></div>
+        <div class="yellow"></div>
+        <div class="yellow"></div>
+        <div class="yellow"></div>
+        <div class="slate"></div>
+      </div>
+    </div>
+    <div id ="container2">
+        <div id="flex1">
+            <div class="dark-green la" >La</div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+            <div class="dark-green"></div>
+        </div>
+        <div id="flex1">
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green am" >Am</div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green"></div>
+            <div class="light-green no" >No</div>
+        </div>
+    </div>
+  </body>
+</html>

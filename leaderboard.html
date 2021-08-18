@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <style>
+      #container{
+        width:30%;
+        height: 800px;
+        margin: auto;
+      }
+      #min-max{
+        width:80%;
+        height:70px;
+        margin:auto;
+        display:flex;
+      }
+      #min-max div{
+        width:40%;
+        text-align: center;
+        margin-left: 5%;
+        line-height:20px;
+      }
+      /* #bg-red{
+        background-color:red;
+      }
+      #bg-green{
+        background-color:green;
+      } */
+      #min-max-word{
+        width:80%;
+        height:40px;
+        margin:auto;
+        display:flex;
+      }
+      #min-max-word h2{
+        text-align: center;
+        margin:2px 45px 0px 70px;
+      }
+      #display1{
+        width: 50%;
+        background-color:#BDBDBD;
+        margin:auto;
+       text-align: center;
+       font-size:20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height:100px;
+      }
+      #score-word{
+        width: 50%;
+        margin:auto;
+        text-align: center;
+        font-weight: bold;
+        font-size:30px;
+        margin-top:20px;
+      }
+      #keyboard{
+        width:80%;
+        height: 300px;
+        margin:auto;
+        margin-top: 20px;
+        display: grid;
+        gap:10px;
+        grid-template-areas: 
+        "one1 two2 three3"
+        "four4 five5 six6"
+        "seven7 eight8 nine9";
+      }
+      .one{
+        grid-area: one1;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .two{
+        grid-area: two2;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .three{
+        grid-area:three3;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .four{
+        grid-area:four4;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .five{
+        grid-area:five5;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .six{
+        grid-area:six6;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .seven{
+        grid-area:seven7;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .eight{
+        grid-area:eight8;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .nine{
+        grid-area:nine9;
+        margin: 10px;
+        font-size: 30px;
+      }
+      .key-color-green{
+        background-color:#388E3C;
+      }
+      .key-color-orange{
+        background-color:#FFA000;
+      }
+      #zero-button{
+        width:25%;
+        margin: auto;
+      }
+      .zero{
+        padding:18px;
+        width: 109px;;
+        margin: 10px;
+        font-size: 30px;
+        background-color:#4A148C;
+        color: white;
+      }
+      #enter-button{
+        width:80%;
+        margin: auto;
+      }
+      .enter{
+        width:100%;
+        height:80px;
+        color:white;
+        font-size: 35px;
+        background-color:black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="min-max">
+       <div id="bg-red"><h1 id="minEle">43</h1></div>
+       <div id="bg-green"><h1 id="maxEle">2019</h1></div>
+      </div>
+      <div id="min-max-word">
+        <h2>MIN</h2>
+        <h2>MAX</h2>
+      </div>
+     
+      <!-- display -->
+      <div id="score-word">SCORE</div>
+      <div id="display1"><h2 id="display"></h2></div>
+      <div id="keyboard">
+          <button class="one key-color-green" onclick="btn_click(1)">1</button>
+          <button class="two key-color-orange" onclick="btn_click(2)">2</button>
+          <button class="three key-color-green" onclick="btn_click(3)">3</button>
+          <button class="four key-color-orange" onclick="btn_click(4)">4</button>
+          <button class="five key-color-orange" onclick="btn_click(5)">5</button>
+          <button class="six key-color-orange" onclick="btn_click(6)">6</button>
+          <button class="seven key-color-green" onclick="btn_click(7)">7</button>
+          <button class="eight key-color-orange" onclick="btn_click(8)">8</button>
+          <button class="nine key-color-green" onclick="btn_click(9)">9</button>
+      </div>
+      <div id="zero-button">
+        <button class="zero " onclick="btn_click(0)">0</button>
+      </div>
+      <div id="enter-button">
+        <button  class="enter" onclick="enter(1), colorChange()"> ENTER</button>
+      </div>
+    </div>
+      
+    <script>
+      var change = document.getElementById("bg-red");
+      var change2 = document.getElementById("bg-green");
+      var min = 143;
+        var max = 2019;
+        var output ="";
+        var display = document.getElementById("display")
+
+        function btn_click(num){
+            output += num;
+            display.textContent = output;
+        }
+        // function random(number){
+        //         return Math.floor(Math.random()*number);
+        //     }
+        //     function colorChange(){
+        //       var newcolor = 'rgb('+ random(255)+ ',' + random(255) + ',' + random(255) + ')'
+        //       var newcolor2 = 'rgb('+ random(255)+ ',' + random(255) + ',' + random(255) + ')'
+        //       change.style.backgroundColor = newcolor;
+        //       change2.style.backgroundColor = newcolor2;
+        //     }
+
+        function enter(){
+            var fn = Number(output);
+            
+
+
+            if(fn < min){
+                min = fn;
+                document.getElementById("minEle").textContent = min;
+                change.style.backgroundColor = "red"
+            }
+            if(fn >max){
+                max = fn;
+                document.getElementById("maxEle").textContent = max;
+                change2.style.backgroundColor ="green"
+            }
+            output ="";
+           
+            display.textContent = output;
+        }
+         
+
+    </script>
+  </body>
+</html>
